@@ -86,7 +86,7 @@ min-height: 620px;
 .splash h1 {
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 60px;
+	font-size: 48px;
 }
 
 .splash p {
@@ -181,16 +181,16 @@ min-height: 620px;
 /* CSS стили для мобильных устройств */
 /* Цвет рамки у кнопки, которая открывает меню */
 .navbar-default .navbar-toggle {
-    border-color: #04559f;
+    border-color: #2b2b2b;
 }
 /* Цвет фона кнопки (которая открывает меню) при поднесении к ней курсора мышки или при нахождении её в фокусе */
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #04559f;
+    background-color: #2b2b2b;
 }
 /* Цвет полосочек в кнопочке, которая открывает меню */
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #ecf0f1;
+    background-color: #fff;
 }
 
 /* ===================================================================================== */
@@ -391,7 +391,7 @@ padding-top: 200%}
         background-color: #04559f;
 		}
 /*  цвет текста заголовка в мобильном виде*/		
-	.splash p {color: #0400ff;
+	.splash p {color: #2b2b2b;
 		text-shadow: 2px 1px 2px #fff}
 		.splash a {
 		font-size: 18px;
