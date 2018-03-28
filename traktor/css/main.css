@@ -1,0 +1,406 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Прелоадер */
+.loaderArea {
+  background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  z-index: 100000;
+}
+
+.loader {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -20px;
+}
+ 
+.loader:before,
+.loader:after {
+  content: "";
+  height: 40px;
+  width: 40px;
+  border: 8px solid rgba(255,255,255,.5);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+}
+ 
+.loader:before {
+  animation: animate 2s infinite linear;
+}
+ 
+@keyframes animate {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+   
+  100% {
+    transform: rotate(180deg) skew(360deg);
+  }
+}
+ 
+ 
+.loader:after {
+  animation: animate2 2s infinite linear;
+}
+ 
+@keyframes animate2 {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+   
+  100% {
+    transform: rotate(-180deg) skew(-360deg);
+  }
+}
+
+/* ===================================================================================== */
+
+/* Заставка */
+.splash { 
+background-color: rgba(1, 113, 215, 1);
+/* Отступ для содержимого, помещенного в splash */
+padding:9em 0 2em;
+/* Картинка, которая используются для splash */
+background:url(../img/bg.jpg)no-repeat center;
+background-size: cover;
+/* Запрещаем фоновому изображению прокручиваться, т.е. делаем его неподвижным */
+background-attachment:fixed;
+/* Цвет текста */
+color:#fff;
+/* Выравниваем текста внутри splash по центру */
+text-align:center;
+
+min-height: 620px;
+}
+.splash h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 60px;
+}
+
+.splash p {
+	font-weight: bold;
+	font-size: 30px;
+	color: #fafafa;
+	padding-bottom: 30px;
+}
+.splash a {
+	font-size: 30px;
+	padding: 25px;
+	margin: 25px;
+	border: #fff solid 3px;
+	background-color: rgba(1, 113, 215, .8);
+	border-radius: 5px;
+	color: #ecf0f1;
+}
+.splash a:hover {
+	text-decoration: none;
+}
+/* ===================================================================================== */
+
+/* цвет фона и рамки навигационного меню */
+.navbar-default {
+    background-color: rgba(1, 113, 215, 0.9);
+    border-color: rgba(1, 113, 215, .8);
+}
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+	color: #d1ffed;
+	font-size: 120%;
+}
+.navbar-default .navbar-text i, .navbar-default .navbar-text span {
+	margin-right: 5px;
+	color: #ecf0f1;
+}
+
+.navbar-default .navbar-link:hover {
+	color: #ecf0f1;
+	text-decoration: underline;
+	font-weight: bold; 
+}
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #d1ffed;
+}
+/* Цвет пунктов навигационного меню */
+.navbar-default .navbar-nav > li > a {
+    color: #ecf0f1;
+}
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #d1ffed;
+}
+/* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #d1ffed;
+    background-color: #04559f;
+}
+/* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #d1ffed;
+    background-color: #04559f;
+}
+/* Цвет стрелочки (треугольничка) у раскрывающихся пунктов меню */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #ecf0f1;
+    border-bottom-color: #ecf0f1;
+}
+/* Цвет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #d1ffed;
+    border-bottom-color: #d1ffed;
+}
+/* Цвет стрелочки (треугольничка), открывшегося пункта меню */
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #d1ffed;
+    border-bottom-color: #d1ffed;
+}
+/* CSS стили для мобильных устройств */
+/* Цвет рамки у кнопки, которая открывает меню */
+.navbar-default .navbar-toggle {
+    border-color: #04559f;
+}
+/* Цвет фона кнопки (которая открывает меню) при поднесении к ней курсора мышки или при нахождении её в фокусе */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #04559f;
+}
+/* Цвет полосочек в кнопочке, которая открывает меню */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+
+/* ===================================================================================== */
+
+#main, #uslugi, #footer {
+	padding: 30px;
+}
+
+#main h1, #uslugi h1 {
+	padding: 40px;
+	font-size: 40px;
+}
+
+.textmain {
+	color: #0400ff;
+	font-size: 18px;
+}
+
+.textmain p {
+	padding-top: 10px;
+}
+.textmain p:before {
+	    content: '';
+    float: left;
+    width: 16px;
+    height: 20px;
+
+    margin-right: 5px;
+}
+.textmain i {
+	font-size: 20px;
+	color: red;
+}
+
+.textmain span {
+	font-weight: bold;
+}
+.textimg img {
+	max-width: 100%;
+	padding-top: 20px;
+}
+
+.textmain h2 {
+	font-size: 25px;
+}
+
+/* ===================================================================================== */
+
+#price, #map {
+	padding: 30px;
+	background-color: rgba(1, 113, 215, 0.9);;
+}
+
+#price h1, #price h2, #map h1 {
+	padding: 40px;
+	font-size: 40px;
+	color: #d1ffed;
+}
+
+#price img {
+	padding-bottom: 20px;
+}
+.pricingTable{
+ box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+ padding: 50px 15px;
+ text-align: center;
+ margin-top: 40px;
+ color: #292929;
+ perspective: 700px;
+ z-index: 1;
+ position: relative;
+ transition: all 0.3s ease-in-out 0s;
+}
+.pricingTable:hover{ color: #fff; }
+.pricingTable:after{
+ content: "";
+ width: 100%;
+ height: 100%;
+ background: #3485ef;
+ position: absolute;
+ top: 0;
+ left: 0;
+ opacity: 0;
+ z-index: -1;
+ transform: rotateY(70deg);
+ transition: all 0.3s ease-in-out 0s;
+}
+.pricingTable:hover:after{
+ opacity: 1;
+ transform: rotateY(0deg);
+}
+.pricingTable .icon{
+ width: 69px;
+ height: 69px;
+ line-height: 69px;
+ border-radius: 50%;
+ background: #fff;
+ box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+ margin: 0 auto;
+ font-size: 25px;
+ color: #3485ef;
+ position: absolute;
+ top: -34px;
+ left: 0;
+ right: 0;
+}
+.pricingTable .pricingTable-header{
+ margin-bottom: 30px;
+}
+.pricingTable .title{
+ display: block;
+ font-size: 18px;
+ font-weight: 600;
+ text-transform: uppercase;
+ margin: 0 0 10px 0;
+}
+.pricingTable .price-value{
+ display: inline-block;
+ border-bottom: 5px solid #3485ef;
+ font-size: 30px;
+ font-weight: 700;
+ transition: all 0.3s ease-in-out 0s;
+}
+.pricingTable:hover .price-value{
+ border-bottom-color: #fff;
+}
+.pricingTable .pricing-content{
+ list-style: none;
+ padding: 0;
+ margin: 0 0 20px 0;
+}
+.pricingTable .pricing-content li{
+ font-size: 14px;
+ line-height: 40px;
+}
+.pricingTable .pricingTable-signup{
+ display: inline-block;
+ padding: 9px 23px;
+ background: #3485ef;
+ font-size: 14px;
+ font-weight: 600;
+ color: #fff;
+ text-transform: uppercase;
+ position: relative;
+ transition: all 0.25s ease-in-out 0s;
+}
+.pricingTable:hover .pricingTable-signup{
+ background: #fff;
+ color: #3485ef;
+}
+.pricingTable .pricingTable-signup:before,
+.pricingTable .pricingTable-signup:after{
+ content: "";
+ height: 100%;
+ position: absolute;
+ top: 0;
+ border-top: 18px solid transparent;
+ border-bottom: 18px solid transparent;
+ transition: all 0.25s ease-in-out 0s;
+}
+.pricingTable .pricingTable-signup:before{
+ left: -12px;
+ border-right: 12px solid #3485ef;
+}
+.pricingTable .pricingTable-signup:after{
+ right: -12px;
+ border-left: 12px solid #3485ef;
+}
+.pricingTable:hover .pricingTable-signup:before{
+ border-right-color: #fff;
+}
+.pricingTable:hover .pricingTable-signup:after{
+ border-left-color: #fff;
+}
+@media only screen and (max-width: 990px){
+ .pricingTable{ margin-bottom: 30px; }
+ .phonelg {opacity: 0}
+}
+@media only screen and (max-width: 767px){
+ .pricingTable{ margin-bottom: 50px; }
+ .phonelg {opacity: 0}
+}
+
+
+.carousel-control i { 
+padding-top: 200%}
+
+
+@media (max-width: 767px) {
+	/* Цвет пунктов меню в раскрывающихся списках */
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+ 	 	}
+/* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #d1ffed;
+        background-color: #04559f;
+		}
+/*  цвет текста заголовка в мобильном виде*/		
+	.splash p {color: #0400ff;
+		text-shadow: 2px 1px 2px #fff}
+		.splash a {
+		font-size: 18px;
+		}
+	
+	}
+	
+
+}
+
+
+
