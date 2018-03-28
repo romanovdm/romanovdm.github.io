@@ -29,7 +29,7 @@ body {
   content: "";
   height: 40px;
   width: 40px;
-  border: 8px solid rgba(255,255,255,.5);
+  border: 8px solid rgba(215,157,65,.5);
   border-radius: 10px;
   position: absolute;
   top: 0;
@@ -68,7 +68,7 @@ body {
 
 /* Заставка */
 .splash { 
-background-color: rgba(1, 113, 215, 1);
+background-color: rgba(215, 157, 65, 1);
 /* Отступ для содержимого, помещенного в splash */
 padding:9em 0 2em;
 /* Картинка, которая используются для splash */
@@ -77,7 +77,7 @@ background-size: cover;
 /* Запрещаем фоновому изображению прокручиваться, т.е. делаем его неподвижным */
 background-attachment:fixed;
 /* Цвет текста */
-color:#fff;
+color:#000;
 /* Выравниваем текста внутри splash по центру */
 text-align:center;
 
@@ -92,15 +92,15 @@ min-height: 620px;
 .splash p {
 	font-weight: bold;
 	font-size: 30px;
-	color: #fafafa;
+	color: #2b2b2b;
 	padding-bottom: 30px;
 }
 .splash a {
 	font-size: 30px;
 	padding: 25px;
 	margin: 25px;
-	border: #fff solid 3px;
-	background-color: rgba(1, 113, 215, .8);
+	border: #000 solid 3px;
+	background-color: rgba(215, 157, 65, .8);
 	border-radius: 5px;
 	color: #ecf0f1;
 }
@@ -111,59 +111,59 @@ min-height: 620px;
 
 /* цвет фона и рамки навигационного меню */
 .navbar-default {
-    background-color: rgba(1, 113, 215, 0.9);
-    border-color: rgba(1, 113, 215, .8);
+    background-color: rgba(215, 157, 65, 0.9);
+    border-color: rgba(215, 157, 65, .8);
 }
 /* цвет текста, содержащий название сайта или бренда */
 .navbar-default .navbar-brand {
-    color: #ecf0f1;
+  color: #2b2b2b;
 }
 .navbar-default .navbar-link {
-	color: #d1ffed;
+  color: #2b2b2b;
 	font-size: 120%;
 }
 .navbar-default .navbar-text i, .navbar-default .navbar-text span {
 	margin-right: 5px;
-	color: #ecf0f1;
+  color: #2b2b2b;
 }
 
 .navbar-default .navbar-link:hover {
-	color: #ecf0f1;
+  color: #2b2b2b;
 	text-decoration: underline;
 	font-weight: bold; 
 }
 /* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #d1ffed;
+    color: #000;
 }
 /* Цвет пунктов навигационного меню */
 .navbar-default .navbar-nav > li > a {
-    color: #ecf0f1;
+    color: #000;
 }
 /* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #d1ffed;
+    color: #000;
 }
 /* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #d1ffed;
-    background-color: #04559f;
+    color: #000;
+    background-color: #b0922e;
 }
 /* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
-    color: #d1ffed;
-    background-color: #04559f;
+    color: #000;
+    background-color: #b0922e;
 }
 /* Цвет стрелочки (треугольничка) у раскрывающихся пунктов меню */
 .navbar-default .navbar-nav > .dropdown > a .caret {
-    border-top-color: #ecf0f1;
-    border-bottom-color: #ecf0f1;
+    color: #000;
+    background-color: #b0922e;
 }
 /* Цвет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
