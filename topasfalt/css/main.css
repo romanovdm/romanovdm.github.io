@@ -1,0 +1,217 @@
+* {
+    letter-spacing: 2px;
+}
+
+html, body{
+  height: 100%;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+    overflow: hidden;
+}
+
+p {
+    line-height: 1.25;
+    margin: 10px;    
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ===================================================================================== */
+
+
+.menu_open {
+    font-size: 3rem;
+    color: aliceblue;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+/* ===================================================================================== */
+
+
+.header {
+    height: 95%;
+    background: url(../img/FJJE7314-607x1080.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.header, .header-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 95%;
+    width: 100%;
+    background: -moz-linear-gradient(-45deg, rgba(30,87,153,0.3) 0%, rgba(118,219,123,0.3) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(30,87,153,0.3) 0%,rgba(118,219,123,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(30,87,153,0.3) 0%,rgba(118,219,123,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d1e5799', endColorstr='#4d76db7b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.header-wraper {
+    background-color: rgba( 5, 5, 5, 0.5);
+    margin: 20px;
+    z-index: 1;
+}
+
+.header h1 {
+    color: aliceblue;
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    padding: 10px;
+    position: relative;
+    margin: 10px;
+}
+
+.header h1::before, .header h1::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-color: cornflowerblue;
+    border-width: 0px;
+    border-style: solid;
+    z-index: 0;
+    animation: sizesBorder 2s ease infinite;
+    
+}
+
+.header h1::before {
+    border-top-width: 5px;
+    border-left-width: 5px;
+    top:0px;
+    left: 0px;
+}
+
+.header h1::after {
+    border-bottom-width: 5px;
+    border-right-width: 5px;
+    bottom:5px;
+    right: 5px;
+}
+
+.header p {
+    color:cornflowerblue;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.header button {
+    border: solid 1px aliceblue;
+    background-color: transparent;
+    font-size: 18px;
+    color: aliceblue;
+    padding: 15px;
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+
+@keyframes sizesBorder{
+    0% {
+       width: 30px;
+       height: 30px; 
+    }
+    25% {
+        width: 50px;
+        height: 50px;
+    }
+    50%{
+        width: 10px;
+        height: 10px;
+    }
+    100%{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+/* ===================================================================================== */
+
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;    
+    background-color: cornflowerblue;
+    transform: translateX(100%);
+    transition: all 1s ease;
+}
+
+.nav-wraper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+   justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.close_menu {
+    font-size: 7rem;
+    color: aliceblue;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu_link {
+    margin: 20px;
+    padding: 10px;
+    position: relative;    
+}
+
+.menu_link::before, .menu_link::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color:  aliceblue;
+    position: absolute;
+    display: inline-block;
+}
+
+.menu_link::before{
+    top: 25px;
+    left: -25px;
+}
+
+.menu_link::after {
+    top: 25px;
+    right: -25px;
+}
+
+.menu_link a {
+    color: aliceblue;
+    font-size: 24px;
+}
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* ===================================================================================== */
+

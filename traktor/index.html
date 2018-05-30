@@ -3,14 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48763211 = new Ya.Metrika({
+                    id:48763211,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/48763211" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
 	     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
 
 	 <meta name="description" content="Аренда трактора. Услуги экскаватора погрузчика в Тамани. Копка траншей и котлованов. Погрузка всевозможных сыпучих материалов (песка, щебня, гравия), строительного мусора и грунта.">
 	 <meta name="keywords" content="Трактор, экскавтор-погрузчик, услуги петушка, Трактор Тамань, Услуги петушка в Тамани, копка трашей, погрузка стройматериалов, аренда трактора, аренда экскаватора погрузчика">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
+	
 	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
 
@@ -318,12 +347,7 @@
     new WOW().init();
 </script>
     <script>
-     $(window).on('load', function () {
-    $preloader = $('.loaderArea'),
-      $loader = $preloader.find('.loader');
-    $loader.fadeOut();
-    $preloader.delay(350).fadeOut('slow');
-  });
+    
     //при нажатии на ссылку
 		$(".navbar-collapse a").click(function() {
 		  //если она не имеет класс dropdown-toggle
@@ -332,8 +356,7 @@
 		    $(".navbar-collapse").collapse('hide');
 		  }
 		});
-
-
+		
 					(function(){
 			  $(window).scroll(function () {
 			      // значение, на которое сместилась страница при прокрутке
