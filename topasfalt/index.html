@@ -32,14 +32,14 @@
 <div class="menu_open"><i class="fa fa-bars"></i></div>
 
 <div class="nav">
-   <div class="close_menu">&times;</div>
+   <div class="close_menu closes">&times;</div>
     <div class="nav-wraper">
         <ul class="nav-wraper">
-            <li class="menu_link"><a href="#">Главная</a></li>
-            <li class="menu_link"><a href="#">О Нас</a></li>
-            <li class="menu_link"><a href="#">Наши работы</a></li>
-            <li class="menu_link"><a href="#">Услуги</a></li>
-            <li class="menu_link"><a href="#">Контакты</a></li>
+            <li class="menu_link"><a class="go_to closes" href=".header">Главная</a></li>
+            <li class="menu_link"><a class="go_to closes" href=".here">О Нас</a></li>
+            <li class="menu_link"><a class="go_to closes" href=".grey">Наши клиенты</a></li>
+            <li class="menu_link"><a class="go_to closes" href=".life">Полезно знать</a></li>
+            <li class="menu_link"><a class="go_to closes" href=".stages">Этапы сотрудничества</a></li>
         </ul>
     </div>
 </div>
@@ -48,7 +48,7 @@
    <div class="header-wraper">
         <h1>Асфальтирование в Краснодаре и Краснодарском крае</h1>
         <p>Благоустройство территории, асфальтирование дорог и площадок</p>
-        <button>Узнать подробнее</button>
+        <button class="go_to" href=".life">Узнать подробнее</button>
     </div>
 </div>
 
@@ -226,7 +226,7 @@
 <script>
     $(function() {
         var link = $('.menu_open');
-        var close = $('.close_menu');
+        var close = $('.closes');
         var menu = $('.nav');
         
         link.on('click', function() {
@@ -240,14 +240,15 @@
     });
 
 
-    $(document).bind( 'mousewheel', function (e) { 
-    var nt = $(document.body).scrollTop()-(e.deltaY*e.deltaFactor*100); 
-    e.preventDefault(); 
-    e.stopPropagation(); 
-    $(document.body).stop().animate( { 
-         scrollTop : nt 
-     } , 500 , 'easeInOutCubic' );  
-} )
+    $(document).ready(function(){
+    $('.go_to').click( function(){ // ловим клик по ссылке с классом go_to
+    var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+        $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); // анимируем скроолинг к элементу scroll_el
+        }
+        return false; // выключаем стандартное действие
+    });
+});
 </script>
 
 
